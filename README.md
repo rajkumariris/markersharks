@@ -24,4 +24,24 @@ You can run the application using the Spring Boot Maven plugin:
 mvn spring-boot:run
 
 
+## Curls
+curl --location 'http://localhost:9090/api/supplier/query/3' \
+--data '{  
 
+  "company_name":"omegaSupplier",
+   "website":"Havisupplier.com",
+   "location":"Bengal",
+   "nature_of_business":"small",
+   "manufacturing_process":"3d_printing"
+}'
+
+curl --location 'http://localhost:9090/api/supplier/CreateSupplier' \
+--header 'Content-Type: application/json' \
+--data '{  
+
+   "company_name":"rajSupplier",
+   "website":"rajsupplier.com",
+   "location":"Bengal",
+   "nature_of_business":"small",
+   "manufacturing_process":"3d_printing"
+}'
